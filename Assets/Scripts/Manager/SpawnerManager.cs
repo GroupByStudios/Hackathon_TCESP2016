@@ -43,7 +43,7 @@ namespace Hackatoon_TCE
 					enemy.transform.position = SpawnPoints[spawnPointIndex].position;
 					enemy.transform.rotation = SpawnPoints[spawnPointIndex].rotation;
 
-					Destroy(enemy, 10);
+					//Destroy(enemy, 10);
 
 					Enemies[enemyFreeSlot] = enemy;
 				}

@@ -16,6 +16,9 @@ namespace Hackatoon_TCE
 
 		public float AnimationSpeedMultiplier = 1;
 
+		[HideInInspector]
+		public Enemy target;
+
 		const string ANIM_SPEED = "Speed_f";
 		const string ANIM_SPEED_MULTIPLIER = "SpeedMultiplier_f";
 		const string ANIM_JUMP = "Jump_b";
@@ -56,6 +59,11 @@ namespace Hackatoon_TCE
 
 			if (Input.GetKeyDown(KeyCode.E))
 			{
+				if (target != null)
+				{
+					target.State = EnemyState.DYING;
+				}
+
 				GameObject[] npcQuestGO = GameObject.FindGameObjectsWithTag("NPCQuest");
 
 				if (npcQuestGO != null)

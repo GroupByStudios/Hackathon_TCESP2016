@@ -6,6 +6,8 @@ TagManager:
   tags:
   - UIManager
   - NPCQuest
+  - DeliveryPoint
+  - CollectPoint
   layers:
   - Default
   - TransparentFX
@@ -15,9 +17,9 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
-  - 
+  - Player
+  - Coin
+  - Floor
   - 
   - 
   - 

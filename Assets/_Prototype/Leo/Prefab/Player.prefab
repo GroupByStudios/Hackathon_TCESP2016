@@ -20,7 +20,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 4000011813264612}
   - 137: {fileID: 137000012563910610}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SA_Zombie_Pimp
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36,7 +36,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 4000014083797046}
   - 137: {fileID: 137000014120775924}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SA_Char_Survivor_FemaleHero
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -51,7 +51,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 4000013188852096}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Foot_Right_jnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -67,7 +67,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 4000010565139378}
   - 137: {fileID: 137000011661450500}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SA_Zombie_Cheerleader
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -83,7 +83,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 4000010790294680}
   - 137: {fileID: 137000010580202806}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SA_Zombie_Farmer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -99,7 +99,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 4000013510958508}
   - 137: {fileID: 137000010509283074}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SA_Char_Survivor_Farmer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -114,7 +114,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 4000011651061038}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Head_jnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -130,7 +130,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 4000012409817144}
   - 137: {fileID: 137000013100444806}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SA_Zombie_Soldier
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -146,7 +146,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 4000012168020110}
   - 137: {fileID: 137000013701370458}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SA_Zombie_Firefighter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -162,7 +162,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 4000014226779822}
   - 137: {fileID: 137000011403518736}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SA_Char_Survivor_FemaleTrenchcoat
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -178,7 +178,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 4000013070778922}
   - 137: {fileID: 137000013742857338}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SA_Zombie_Streetman
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -194,7 +194,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 4000011919761416}
   - 137: {fileID: 137000011016288268}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SA_Zombie_Grandma
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -210,7 +210,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 4000012430718930}
   - 137: {fileID: 137000010991667452}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SA_Zombie_Prisoner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -225,7 +225,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 4000010909305608}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Hips_jnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -241,7 +241,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 4000010529741346}
   - 137: {fileID: 137000013077317410}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SA_Zombie_AirportWorker
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -256,7 +256,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 4000013662510292}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: UpperArm_Right_jnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -272,7 +272,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 4000011636898040}
   - 137: {fileID: 137000010924842360}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SA_Zombie_Roadworker
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -288,7 +288,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 4000011633704278}
   - 137: {fileID: 137000010450074258}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SA_Zombie_AirportSecurity
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -304,7 +304,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 4000011243298958}
   - 137: {fileID: 137000014016610336}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SA_Zombie_Prostitute
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -320,7 +320,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 4000011962171218}
   - 137: {fileID: 137000011318550420}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SA_Zombie_Industrial
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -336,7 +336,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 4000013209397818}
   - 137: {fileID: 137000012634974916}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SA_Char_Survivor_Male_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -351,7 +351,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 4000011149974276}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Hand_Left_jnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -367,7 +367,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 4000013334868234}
   - 137: {fileID: 137000013837649672}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SA_Char_Survivor_Hazard
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -383,7 +383,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 4000013022402818}
   - 137: {fileID: 137000010273348456}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SA_Char_Survivor_MaleHunter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -398,7 +398,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 4000014282921610}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: UpperArm_Left_jnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -414,13 +414,13 @@ GameObject:
   m_Component:
   - 4: {fileID: 4000010621294040}
   - 137: {fileID: 137000010808392094}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SA_Char_Survivor_FemaleSoldier
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &1000011737554208
 GameObject:
   m_ObjectHideFlags: 0
@@ -430,7 +430,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 4000014097944850}
   - 137: {fileID: 137000011851509766}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SA_Zombie_Tourist
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -446,7 +446,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 4000014060302138}
   - 137: {fileID: 137000010451965214}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SA_Char_Survivor_Male_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -462,7 +462,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 4000010138337946}
   - 137: {fileID: 137000010354699880}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SA_Zombie_Pilot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -478,7 +478,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 4000012996011816}
   - 137: {fileID: 137000010159347560}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SA_Char_Survivor_OldMan
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -494,7 +494,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 4000012603139388}
   - 137: {fileID: 137000011046959622}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SA_Char_Survivor_Male_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -510,7 +510,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 4000010881218370}
   - 137: {fileID: 137000012041876648}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SA_Char_Survivor_Businessman
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -526,7 +526,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 4000012010439464}
   - 137: {fileID: 137000011401099752}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SA_Char_Survivor_Prisoner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -542,7 +542,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 4000013670570992}
   - 137: {fileID: 137000012623227458}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SA_Zombie_Bellhop
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -557,7 +557,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 4000010230136184}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: UpperLeg_Right_jnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -572,7 +572,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 4000012069565680}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: LowerLeg_Right_jnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -587,7 +587,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 4000012644061054}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Hat_jnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -603,7 +603,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 4000012093476894}
   - 137: {fileID: 137000010519983170}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SA_Char_Survivor_Scout
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -619,7 +619,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 4000012382933568}
   - 137: {fileID: 137000010567793136}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SA_Char_Survivor_MaleTrenchcoat
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -635,7 +635,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 4000013439127630}
   - 137: {fileID: 137000011660670918}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SA_Zombie_FarmersDaughter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -651,7 +651,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 4000013272780346}
   - 137: {fileID: 137000010079246680}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SA_Zombie_Clown
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -667,7 +667,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 4000014057633424}
   - 137: {fileID: 137000011135123734}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SA_Char_Survivor_Doctor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -682,7 +682,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 4000011413234510}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: UpperLeg_Left_jnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -698,7 +698,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 4000011302279726}
   - 137: {fileID: 137000013216213096}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SA_Zombie_Runner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -714,7 +714,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 4000013465017344}
   - 137: {fileID: 137000012182240396}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SA_Char_Survivor_Biohazard
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -731,9 +731,9 @@ GameObject:
   - 4: {fileID: 4000011626077538}
   - 95: {fileID: 95000010506578668}
   - 114: {fileID: 114000012034836878}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -747,13 +747,32 @@ GameObject:
   m_Component:
   - 4: {fileID: 4000010592553964}
   - 137: {fileID: 137000013826223432}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SA_Zombie_Businessman
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
+--- !u!1 &1000013029191822
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 4000013089558810}
+  - 20: {fileID: 20000011646488952}
+  - 124: {fileID: 124000010208867144}
+  - 92: {fileID: 92000013251955974}
+  - 81: {fileID: 81000013909453438}
+  m_Layer: 8
+  m_Name: PlayerFace
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1000013054035734
 GameObject:
   m_ObjectHideFlags: 0
@@ -763,7 +782,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 4000010403427672}
   - 137: {fileID: 137000012800973074}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SA_Char_Survivor_Sheriff
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -779,7 +798,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 4000012286723916}
   - 137: {fileID: 137000014277422608}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SA_Zombie_Santa
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -794,7 +813,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 4000012059701906}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Body_jnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -810,7 +829,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 4000014244663802}
   - 137: {fileID: 137000011034613374}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SA_Char_Survivor_FemalePyro
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -826,7 +845,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 4000012770843454}
   - 137: {fileID: 137000012703116218}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SA_Zombie_Robber
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -841,7 +860,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 4000013736774730}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: LowerArm_Right_jnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -856,7 +875,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 4000011457754640}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Foot_Left_jnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -872,7 +891,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 4000014254628916}
   - 137: {fileID: 137000012441486760}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SA_Char_Survivor_InjuredMan
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -888,7 +907,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 4000011562126090}
   - 137: {fileID: 137000012530082968}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SA_Char_Survivor_Male_04
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -904,7 +923,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 4000010447778814}
   - 137: {fileID: 137000012077441336}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SA_Char_Survivor_RoadWorker
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -920,7 +939,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 4000010287355326}
   - 137: {fileID: 137000011486960980}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SA_Zombie_FootballPlayer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -935,7 +954,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 4000010848001842}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: LowerLeg_Left_jnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -951,7 +970,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 4000013388812154}
   - 137: {fileID: 137000010977450250}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SA_Zombie_Trucker
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -966,7 +985,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 4000012557773422}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Spine_jnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -982,7 +1001,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 4000014207824094}
   - 137: {fileID: 137000010946959688}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SA_Char_Survivor_HoodedMan
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -997,7 +1016,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 4000010404764260}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: LowerArm_Left_jnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1013,7 +1032,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 4000011454774604}
   - 137: {fileID: 137000011621409676}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SA_Zombie_Mountie
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1028,7 +1047,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 4000012802961272}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Hand_Right_jnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1043,7 +1062,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 4000010840504344}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Root_jnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1059,7 +1078,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 4000011576180336}
   - 137: {fileID: 137000012788846430}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SA_Zombie_Hobo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1075,7 +1094,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 4000013905064150}
   - 137: {fileID: 137000012171184462}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SA_Zombie_Shopkeeper
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1091,7 +1110,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 4000010178934936}
   - 137: {fileID: 137000010478975576}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SA_Zombie_Mechanic
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1130,8 +1149,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000012408416414}
-  m_LocalRotation: {x: -0.49918568, y: 0.8664699, z: 0.0057249772, w: -0.003284124}
-  m_LocalPosition: {x: 0.12763838, y: -0.22304337, z: 0}
+  m_LocalRotation: {x: -0.53001267, y: 0.8389531, z: -0.0076387688, w: -0.123231485}
+  m_LocalPosition: {x: 0.12763998, y: -0.22304417, z: 0.00000010430813}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
@@ -1170,8 +1189,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000013948367878}
-  m_LocalRotation: {x: 0, y: 0, z: -2.3869795e-15, w: 1}
-  m_LocalPosition: {x: 0.471188, y: 0, z: 5.77041e-17}
+  m_LocalRotation: {x: 0.009791261, y: -0.2819376, z: -0.0047813095, w: 0.959371}
+  m_LocalPosition: {x: 0.471188, y: 0.000000056169988, z: 5.77041e-17}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
@@ -1262,7 +1281,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000014059491160}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1276,8 +1295,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000013804091540}
-  m_LocalRotation: {x: -0.7075902, y: 0.000006446892, z: -0.000006145912, w: 0.706623}
-  m_LocalPosition: {x: -0.37452164, y: -7.105427e-17, z: -1.7347234e-20}
+  m_LocalRotation: {x: -0.70623606, y: -0.123882845, z: -0.099319205, w: 0.6899416}
+  m_LocalPosition: {x: -0.37907967, y: 0.0000030398369, z: 0.00000060070306}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
@@ -1303,8 +1322,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000010909243300}
-  m_LocalRotation: {x: 0, y: 0, z: 0.2597436, w: 0.9656776}
-  m_LocalPosition: {x: -0, y: 1.0449876, z: 0}
+  m_LocalRotation: {x: 0.010132943, y: -0.0028005235, z: 0.25340873, w: 0.9673022}
+  m_LocalPosition: {x: -0.031234752, y: 1.0376817, z: -0.008164857}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
@@ -1319,8 +1338,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000011411544336}
-  m_LocalRotation: {x: -1.7658669e-13, y: 1, z: -7.2736614e-16, w: -2.2836737e-15}
-  m_LocalPosition: {x: 0.4403, y: -5.684342e-16, z: 5.39209e-17}
+  m_LocalRotation: {x: -0.030308116, y: 0.99647397, z: -0.0033641746, w: 0.078165114}
+  m_LocalPosition: {x: 0.4403, y: 0.00000005248785, z: 5.3920893e-17}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
@@ -1358,8 +1377,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000012825152608}
-  m_LocalRotation: {x: -0.00013711104, y: -0.00008424717, z: 0.49917465, w: 0.8665014}
-  m_LocalPosition: {x: -0.25698245, y: -1.4210854e-16, z: 0}
+  m_LocalRotation: {x: -0.10663651, y: 0.04486469, z: 0.47016585, w: 0.8749628}
+  m_LocalPosition: {x: -0.25698474, y: 0.0000011920929, z: 0.000000029802322}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
@@ -1385,8 +1404,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000013547285536}
-  m_LocalRotation: {x: 0.50042224, y: 0.5004222, z: -0.49957308, w: 0.49958178}
-  m_LocalPosition: {x: -0.38874373, y: 1.20736755e-17, z: 7.342678e-12}
+  m_LocalRotation: {x: 0.4763215, y: 0.5694415, z: -0.43753764, w: 0.50736094}
+  m_LocalPosition: {x: -0.39347452, y: 0.00000006032998, z: -0.000000044818965}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
@@ -1425,7 +1444,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000012891597780}
   m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
-  m_LocalPosition: {x: 4.17, y: 0, z: -63.35}
+  m_LocalPosition: {x: 0, y: 0, z: -16.58}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
@@ -1480,6 +1499,7 @@ Transform:
   - {fileID: 4000013070778922}
   - {fileID: 4000014097944850}
   - {fileID: 4000013388812154}
+  - {fileID: 4000013089558810}
   m_Father: {fileID: 0}
   m_RootOrder: 0
 --- !u!4 &4000011633704278
@@ -1514,8 +1534,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000010386240396}
-  m_LocalRotation: {x: 0, y: 0, z: -1.6653345e-15, w: 1}
-  m_LocalPosition: {x: -0.3106261, y: 6.897285e-17, z: 0}
+  m_LocalRotation: {x: 3.946073e-15, y: -0.00000009362676, z: 0.0000001872535, w: 1}
+  m_LocalPosition: {x: -0.31062603, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
@@ -1580,8 +1600,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000013165251584}
-  m_LocalRotation: {x: -0, y: 0, z: 0.86650366, w: -0.49917072}
-  m_LocalPosition: {x: 0.009555898, y: 0.016478358, z: 0}
+  m_LocalRotation: {x: -0.018200928, y: -0.011399718, z: 0.8566106, w: -0.51551634}
+  m_LocalPosition: {x: 0.0095559135, y: 0.016478386, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
@@ -1594,8 +1614,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000012423370140}
-  m_LocalRotation: {x: -0.70410997, y: -0.000030960506, z: 0.00005181963, w: 0.71009094}
-  m_LocalPosition: {x: 0.374522, y: 3.1974422e-16, z: -1.0987399e-12}
+  m_LocalRotation: {x: -0.69387484, y: -0.13890696, z: -0.122810006, w: 0.6958163}
+  m_LocalPosition: {x: 0.3776512, y: 0.0000036656857, z: 0.00000052526593}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
@@ -1686,8 +1706,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000013873694750}
-  m_LocalRotation: {x: 0, y: 0, z: -1.6102571e-15, w: 1}
-  m_LocalPosition: {x: -0.6703252, y: 3.7986005e-16, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.67032516, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
@@ -1741,8 +1761,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000014022972010}
-  m_LocalRotation: {x: 1.4105955e-13, y: 1, z: -1.1714554e-15, w: 1.8533623e-15}
-  m_LocalPosition: {x: -0.4403, y: -8.5265126e-16, z: -5.3921198e-17}
+  m_LocalRotation: {x: -0.0000025495538, y: 0.99369687, z: 0.0020938762, w: 0.11208129}
+  m_LocalPosition: {x: -0.4403, y: 0.000000052487845, z: -5.39212e-17}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
@@ -1787,14 +1807,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4000011626077538}
   m_RootOrder: 48
+--- !u!4 &4000013089558810
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000013029191822}
+  m_LocalRotation: {x: -0, y: 1, z: -0, w: -0.00000035762784}
+  m_LocalPosition: {x: -0, y: 2.24, z: 1.22}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 179.99998, z: 0}
+  m_Children: []
+  m_Father: {fileID: 4000011626077538}
+  m_RootOrder: 51
 --- !u!4 &4000013188852096
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000010101163858}
-  m_LocalRotation: {x: 0.50117123, y: 0.5011969, z: -0.498829, w: 0.49879736}
-  m_LocalPosition: {x: 0.388744, y: 8.197164e-12, z: -3.690733e-11}
+  m_LocalRotation: {x: 0.47063905, y: 0.5605433, z: -0.4344309, w: 0.5249381}
+  m_LocalPosition: {x: 0.39199185, y: -0.00000006010264, z: -0.000000058978287}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
@@ -1897,8 +1930,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000011005089464}
-  m_LocalRotation: {x: -0.7071068, y: 0.7071068, z: 4.3352284e-17, w: -4.3243328e-17}
-  m_LocalPosition: {x: -0.21910845, y: 0.565232, z: 0}
+  m_LocalRotation: {x: -0.082880236, y: 0.95732886, z: 0.2501338, w: -0.11868227}
+  m_LocalPosition: {x: -0.2191084, y: 0.56523204, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
@@ -1924,8 +1957,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000013543247348}
-  m_LocalRotation: {x: 0, y: 0, z: 8.3266727e-16, w: 1}
-  m_LocalPosition: {x: -0.47118998, y: 5.684342e-16, z: -5.770413e-17}
+  m_LocalRotation: {x: -0.101817496, y: -0.32126185, z: 0.03613852, w: 0.94080716}
+  m_LocalPosition: {x: -0.47118992, y: 0.000000056170215, z: -5.7704126e-17}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
@@ -2055,14 +2088,62 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000011698822598}
-  m_LocalRotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: -0.21910845, y: -0.565232, z: 0}
+  m_LocalRotation: {x: -0.082626395, y: 0.18309069, z: -0.043513596, w: 0.97865075}
+  m_LocalPosition: {x: -0.21910852, y: -0.5652319, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 4000010404764260}
   m_Father: {fileID: 4000012557773422}
   m_RootOrder: 1
+--- !u!20 &20000011646488952
+Camera:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000013029191822}
+  m_Enabled: 1
+  serializedVersion: 2
+  m_ClearFlags: 2
+  m_BackGroundColor: {r: 1, g: 1, b: 1, a: 0}
+  m_NormalizedViewPortRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+  near clip plane: 0
+  far clip plane: 2
+  field of view: 60
+  orthographic: 1
+  orthographic size: 0.71
+  m_Depth: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 256
+  m_RenderingPath: 3
+  m_TargetTexture: {fileID: 8400000, guid: fa8b44c42cc578346bb119970e995140, type: 2}
+  m_TargetDisplay: 0
+  m_TargetEye: 3
+  m_HDR: 0
+  m_OcclusionCulling: 0
+  m_StereoConvergence: 10
+  m_StereoSeparation: 0.022
+  m_StereoMirrorMode: 0
+--- !u!81 &81000013909453438
+AudioListener:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000013029191822}
+  m_Enabled: 0
+--- !u!92 &92000013251955974
+Behaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000013029191822}
+  m_Enabled: 0
 --- !u!95 &95000010506578668
 Animator:
   serializedVersion: 3
@@ -2092,7 +2173,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SpawnPoint: {fileID: 0}
-  AvatarIndex: 5
+  AvatarIndex: 6
   AvatarList:
   - {fileID: 1000012855379002}
   - {fileID: 1000012084642262}
@@ -2119,6 +2200,13 @@ MonoBehaviour:
   AnimationStatic: 0
   AnimatorController: {fileID: 95000010506578668}
   AnimationSpeedMultiplier: 1.1
+--- !u!124 &124000010208867144
+Behaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000013029191822}
+  m_Enabled: 0
 --- !u!137 &137000010079246680
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1
