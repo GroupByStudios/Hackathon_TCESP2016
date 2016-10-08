@@ -40,6 +40,8 @@ namespace Hackatoon_TCE
 		public float Speed = 5f;
 		public float AnimationSpeedMultiplier = 1;
 
+		[HideInInspector]
+		public NavMeshAgent navmeshAgent;
 
 		const string ANIM_SPEED = "Speed_f";
 		const string ANIM_SPEED_MULTIPLIER = "SpeedMultiplier_f";
@@ -55,7 +57,7 @@ namespace Hackatoon_TCE
 			}
 
 			IdleCooldown = Random.Range(1, 5);
-
+			navmeshAgent = GetComponent<NavMeshAgent>();
 		}
 
 
@@ -84,7 +86,7 @@ namespace Hackatoon_TCE
 		}
 
 
-		NavMeshAgent navmeshAgent;
+
 
 		CollectPoint[] collectPoints;
 		CollectPoint collectPointTarget;

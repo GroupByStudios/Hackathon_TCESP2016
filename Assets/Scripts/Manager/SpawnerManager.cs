@@ -39,13 +39,14 @@ namespace Hackatoon_TCE
 				{
 					int spawnPointIndex = Random.Range(0, SpawnPoints.Length);
 
-					GameObject enemy = Instantiate(EnemyPrefab);
+					Enemy enemy = Instantiate(EnemyPrefab).GetComponent<Enemy>();
+					enemy.navmeshAgent = enemy.GetComponent<NavMeshAgent>();
+					enemy.navmeshAgent.Warp(SpawnPoints[spawnPointIndex].position);
 					enemy.transform.position = SpawnPoints[spawnPointIndex].position;
 					enemy.transform.rotation = SpawnPoints[spawnPointIndex].rotation;
 
 					//Destroy(enemy, 10);
-
-					Enemies[enemyFreeSlot] = enemy;
+					Enemies[enemyFreeSlot] = enemy.gameObject;
 				}
 
 				currentSpawnCooldown = 0;
