@@ -183,6 +183,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 481186}
   - 137: {fileID: 13747836}
+  - 114: {fileID: 114000014109422164}
   m_Layer: 0
   m_Name: SA_Char_Survivor_MaleHunter
   m_TagString: Untagged
@@ -957,7 +958,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &187564
 GameObject:
   m_ObjectHideFlags: 1
@@ -5058,3 +5059,16 @@ Prefab:
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 187494}
   m_IsPrefabParent: 1
+--- !u!114 &114000014109422164
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 117414}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f296e2e19a71174baa3b5b188dac336, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: "Ca\xE7ador"
+  Description: "Her\xF3i inteligente e amigo, gosta muito de aventura."

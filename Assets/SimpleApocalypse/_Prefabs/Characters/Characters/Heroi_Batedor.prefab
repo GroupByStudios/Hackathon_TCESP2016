@@ -1078,6 +1078,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 426510}
   - 137: {fileID: 13777014}
+  - 114: {fileID: 114000012879575472}
   m_Layer: 0
   m_Name: SA_Char_Survivor_Scout
   m_TagString: Untagged
@@ -5058,3 +5059,16 @@ Prefab:
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 141346}
   m_IsPrefabParent: 1
+--- !u!114 &114000012879575472
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 196938}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f296e2e19a71174baa3b5b188dac336, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Batedor
+  Description: "Heroi com com cora\xE7\xE3o, ajuda muitas pessoas."
