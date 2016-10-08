@@ -2506,11 +2506,6 @@ Transform:
 Transform:
   m_PrefabParentObject: {fileID: 484990, guid: 607facfd35b121945bf4493ef50978b4, type: 2}
   m_PrefabInternal: {fileID: 1089940095}
---- !u!95 &198215299 stripped
-Animator:
-  m_PrefabParentObject: {fileID: 9506868, guid: 4b753b6812bbae74586b1e8b2e2ef623,
-    type: 2}
-  m_PrefabInternal: {fileID: 2126186657}
 --- !u!1001 &198394926
 Prefab:
   m_ObjectHideFlags: 0
@@ -12816,36 +12811,12 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 419380, guid: 44c107492f53a7f499432ecb3b57d559, type: 2}
   m_PrefabInternal: {fileID: 1119526791}
---- !u!1 &1119646407 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 141526, guid: 4b753b6812bbae74586b1e8b2e2ef623, type: 2}
-  m_PrefabInternal: {fileID: 2126186657}
 --- !u!114 &1119646409 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 114000012534944022, guid: 4b753b6812bbae74586b1e8b2e2ef623,
     type: 2}
   m_PrefabInternal: {fileID: 2126186657}
   m_Script: {fileID: 11500000, guid: 650aa7590d34f5a4faec51fe885f4e96, type: 3}
---- !u!195 &1119646410
-NavMeshAgent:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1119646407}
-  m_Enabled: 1
-  m_Radius: 0.5
-  m_Speed: 10
-  m_Acceleration: 10
-  avoidancePriority: 50
-  m_AngularSpeed: 360
-  m_StoppingDistance: 0
-  m_AutoTraverseOffMeshLink: 1
-  m_AutoBraking: 1
-  m_AutoRepath: 1
-  m_Height: 2.85
-  m_BaseOffset: 0
-  m_WalkableMask: 4294967295
-  m_ObstacleAvoidanceType: 4
 --- !u!4 &1123853929 stripped
 Transform:
   m_PrefabParentObject: {fileID: 484990, guid: 607facfd35b121945bf4493ef50978b4, type: 2}
@@ -22995,16 +22966,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 114000012534944022, guid: 4b753b6812bbae74586b1e8b2e2ef623,
-        type: 2}
-      propertyPath: MinDistance
-      value: 2.25
-      objectReference: {fileID: 0}
-    - target: {fileID: 114000012534944022, guid: 4b753b6812bbae74586b1e8b2e2ef623,
-        type: 2}
-      propertyPath: animatorController
-      value: 
-      objectReference: {fileID: 198215299}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4b753b6812bbae74586b1e8b2e2ef623, type: 2}
   m_IsPrefabParent: 0
