@@ -12,12 +12,13 @@ namespace Hackatoon_TCE
 		public float SpawnCooldown;
 
 		float currentSpawnCooldown;
-		GameObject[] Enemies;
+        [HideInInspector]
+		public Enemy[] Enemies;
 
 		// Use this for initialization
 		void Start () {
 		
-			Enemies = new GameObject[MaxEnemies];
+			Enemies = new Enemy[MaxEnemies];
 
 			for(int i = 0; i < Enemies.Length; i++)
 			{
@@ -46,7 +47,7 @@ namespace Hackatoon_TCE
 					enemy.transform.rotation = SpawnPoints[spawnPointIndex].rotation;
 
 					//Destroy(enemy, 10);
-					Enemies[enemyFreeSlot] = enemy.gameObject;
+					Enemies[enemyFreeSlot] = enemy;
 				}
 
 				currentSpawnCooldown = 0;

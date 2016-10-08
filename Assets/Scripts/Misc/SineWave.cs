@@ -4,26 +4,28 @@ using System.Collections;
 namespace Hackatoon_TCE
 {
 
-	public class SineWave : MonoBehaviour {
+    public class SineWave : MonoBehaviour
+    {
 
-		public float amplitudeX = 10.0f;
-		public float amplitudeY = 5.0f;
-		public float omegaX = 1.0f;
-		public float omegaY = 5.0f;
-		public float index;
+        public float amplitudeX = 10.0f;
+        public float amplitudeY = 5.0f;
+        public float omegaX = 1.0f;
+        public float omegaY = 5.0f;
+        public float index;
 
-		public float RotationSpeed = 5f;
+        public float RotationSpeed = 5f;
 
-		// Update is called once per frame
-		void Update () {
+        // Update is called once per frame
+        void Update()
+        {
 
-			index += Time.deltaTime;
-			float x = amplitudeX * Mathf.Cos (omegaX*index);
-			float y = amplitudeY*Mathf.Sin (omegaY*index);
-			transform.localPosition= new Vector3(transform.localPosition.x,y,transform.localPosition.z);
+            index += Time.deltaTime;
+            float x = amplitudeX * Mathf.Cos(omegaX * index);
+            float y = amplitudeY * Mathf.Sin(omegaY * index);
+            transform.localPosition = new Vector3(transform.localPosition.x, transform.localPosition.y + y, transform.localPosition.z);
 
-			transform.Rotate(new Vector3(0, RotationSpeed * Time.deltaTime, 0));
-		}
-	}
+            transform.Rotate(new Vector3(0, RotationSpeed * Time.deltaTime, 0));
+        }
+    }
 
 }

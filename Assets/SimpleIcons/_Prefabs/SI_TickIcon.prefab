@@ -10,6 +10,7 @@ GameObject:
   - 4: {fileID: 411224}
   - 33: {fileID: 3302738}
   - 23: {fileID: 2313254}
+  - 114: {fileID: 114000011598962950}
   m_Layer: 0
   m_Name: SI_TickIcon
   m_TagString: Untagged
@@ -24,7 +25,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 140012}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 3.9, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
@@ -77,3 +78,20 @@ Prefab:
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 140012}
   m_IsPrefabParent: 1
+--- !u!114 &114000011598962950
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 140012}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7429456246664ec41ad40519e2c459bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  amplitudeX: 0
+  amplitudeY: 0.2
+  omegaX: 50
+  omegaY: 6
+  index: 210.43848
+  RotationSpeed: 5
