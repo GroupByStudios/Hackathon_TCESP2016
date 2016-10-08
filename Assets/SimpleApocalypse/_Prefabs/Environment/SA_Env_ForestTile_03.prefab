@@ -10,12 +10,13 @@ GameObject:
   - 4: {fileID: 439352}
   - 33: {fileID: 3382656}
   - 23: {fileID: 2386750}
-  m_Layer: 0
+  - 136: {fileID: 136000013747908356}
+  m_Layer: 10
   m_Name: SA_Env_ForestTile_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &439352
 Transform:
@@ -23,10 +24,10 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 111822}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: 0.47763303, z: -0, w: -0.87855947}
+  m_LocalPosition: {x: 4.7525854, y: -0.7, z: 38.83506}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -416.925, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -77,3 +78,16 @@ Prefab:
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 111822}
   m_IsPrefabParent: 1
+--- !u!136 &136000013747908356
+CapsuleCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 111822}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 6.93
+  m_Height: 11.540801
+  m_Direction: 1
+  m_Center: {x: -7.4999995, y: 5.5782294, z: -7.4999995}

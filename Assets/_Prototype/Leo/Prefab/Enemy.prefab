@@ -34054,6 +34054,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 023dcc86cce12a64fa83e422aa83318c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameManager: {fileID: 0}
   State: 0
   AvatarIndex: 0
   AvatarList:
@@ -34091,6 +34092,7 @@ MonoBehaviour:
   - {fileID: 1000013122295236}
   - {fileID: 1000013995536652}
   SpawnPoint: {fileID: 0}
+  capsuleCollider: {fileID: 0}
   DeliveryIcon: {fileID: 1000014254928942}
   RunIcon: {fileID: 1000012825752846}
   SettingsIcon: {fileID: 1000012686651526}
@@ -34108,7 +34110,7 @@ MonoBehaviour:
   RunningMinDistance: 6
   MovingChance: 70
   CollectingChance: 40
-  IdleCooldown: 4
+  IdleCooldown: 1
   CollectingCooldown: 2
   DeliveryCoolDown: 3
   RunningCooldown: 4

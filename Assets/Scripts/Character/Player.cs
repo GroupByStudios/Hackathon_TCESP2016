@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 
 namespace Hackatoon_TCE
@@ -6,6 +7,8 @@ namespace Hackatoon_TCE
 
     public class Player : MonoBehaviour
     {
+        public float defaultY;
+
 
         public float MaxConeEnergy = 100f;
         public float ConeEnergy = 100f;
@@ -37,6 +40,12 @@ namespace Hackatoon_TCE
 
         public float AnimationSpeedMultiplier = 1;
 
+        public Text HUD_Star_Text;
+        public Slider HUD_Energia_Slider;
+        private float coinAmmount = 0f;
+
+        private Rigidbody currentRigidBody;
+
         [HideInInspector]
         public Enemy target;
 
@@ -52,6 +61,8 @@ namespace Hackatoon_TCE
                 transform.position = SpawnPoint.transform.position;
                 transform.rotation = SpawnPoint.transform.rotation;
             }
+
+
         }
 
         // Use this for initialization
@@ -62,6 +73,10 @@ namespace Hackatoon_TCE
             {
                 AvatarList[AvatarIndex].SetActive(true);
             }
+
+            defaultY = transform.position.y;
+
+            currentRigidBody = GetComponent<Rigidbody>();
         }
 
         // Update is called once per frame
@@ -178,6 +193,15 @@ namespace Hackatoon_TCE
                     UpdateConeColor(0);
                 }
             }
+
+            AtualizarHUD();
+
+            if (transform.position.y > 1)
+            {
+                transform.position = new Vector3(transform.position.x, 0, transform.position.z);
+                currentRigidBody.velocity = Vector3.zero;
+            }
+
         }
 
         private void UpdateConeColor(float colorTime)
@@ -197,6 +221,35 @@ namespace Hackatoon_TCE
                     ConeBorderMaterial[i].material.color = ConeBorderColor.Evaluate(colorTime);
                 }
             }
+        }
+
+        public void GiveCoin()
+        {
+            this.coinAmmount++;
+        }
+
+        public void RemoveCoin(float quantidade)
+        {
+            this.coinAmmount -= quantidade;
+
+            if (coinAmmount < 0)
+                coinAmmount = 0;
+
+        }
+
+        public void AtualizarHUD()
+        {
+            if (HUD_Star_Text != null)
+            {
+                HUD_Star_Text.text = coinAmmount.ToString();
+            }
+
+            if (HUD_Energia_Slider != null)
+            {
+                HUD_Energia_Slider.maxValue = MaxConeEnergy;
+                HUD_Energia_Slider.value = ConeEnergy;
+            }
+
         }
 
     }

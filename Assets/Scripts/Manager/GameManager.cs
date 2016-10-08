@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 
 namespace Hackatoon_TCE
@@ -11,6 +12,12 @@ namespace Hackatoon_TCE
         public Player Player = null;
         public Transform OfficerSpawner;
 
+        public Slider SliderCorrupcao;
+        public Slider SliderCidadania;
+
+        public int corrupcao;
+        public int cidadania;
+    
         void Update()
         {
 
@@ -47,15 +54,59 @@ namespace Hackatoon_TCE
                                 officerObj.Target = enemyPtr.transform.position;
                             }
 
-                            // Spawn dos policiais
-                            // Muda o estado do personagem para Pego
+
                         }
                     }
                 }
             }
+            AtualizarHUD();
+        }
+
+        public void AumentarCorrupcao()
+        {
+            corrupcao++;
+            if (corrupcao >= 20)
+            {
+                // Perdeu o jogo
+            }
+            
+            cidadania--;
+
+            if (cidadania < 0)
+                cidadania = 0;
+        }
+
+        public void AumtentarCidadania()
+        {
+            cidadania += 3;
+            corrupcao--;
+
+            if (corrupcao < 0)
+                corrupcao = 0;
+
+            if (cidadania > 20)
+            {
+                // navega para os creditos
+            }
         }
 
 
+        public void AtualizarHUD()
+        {
+
+            if (SliderCorrupcao != null)
+            {
+                SliderCorrupcao.maxValue = 20;
+                SliderCorrupcao.value = corrupcao;
+            }
+
+            if (SliderCidadania != null)
+            {
+                SliderCidadania.maxValue = 20;
+                SliderCidadania.value = cidadania;
+            }
+
+        }
 	}
 
 }

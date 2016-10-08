@@ -34,6 +34,7 @@ public class UIManager : MonoBehaviour {
 					if (textTime > 0)					
 					{
 						Text textComponent = Instantiate(TextPrefab).GetComponent<Text>();
+                        textComponent.color = Color.white;
 						textComponent.transform.SetParent(Canvas.transform);
 						textComponent.text = textMessage;
 						Destroy(textComponent.gameObject, textTime);

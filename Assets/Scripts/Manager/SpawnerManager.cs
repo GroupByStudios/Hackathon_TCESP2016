@@ -15,6 +15,8 @@ namespace Hackatoon_TCE
         [HideInInspector]
 		public Enemy[] Enemies;
 
+        public GameManager gameManager;
+
 		// Use this for initialization
 		void Start () {
 		
@@ -41,6 +43,7 @@ namespace Hackatoon_TCE
 					int spawnPointIndex = Random.Range(0, SpawnPoints.Length);
 
 					Enemy enemy = Instantiate(EnemyPrefab).GetComponent<Enemy>();
+                    enemy.gameManager = gameManager;
 					enemy.navmeshAgent = enemy.GetComponent<NavMeshAgent>();
 					enemy.navmeshAgent.Warp(SpawnPoints[spawnPointIndex].position);
 					enemy.transform.position = SpawnPoints[spawnPointIndex].position;

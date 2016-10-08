@@ -22,12 +22,18 @@ namespace Hackatoon_TCE
     public class Enemy : MonoBehaviour
     {
 
+        public GameManager gameManager;
+
+
         public EnemyState State;
 
         public int AvatarIndex;
         public GameObject[] AvatarList;
         private GameObject currentAvatar;
         public Transform SpawnPoint;
+
+
+        public CapsuleCollider capsuleCollider;
 
         public GameObject DeliveryIcon;
         public GameObject RunIcon;
@@ -94,10 +100,13 @@ namespace Hackatoon_TCE
             }
 
             navmeshAgent = GetComponent<NavMeshAgent>();
+
             AnimatorController = currentAvatar.GetComponent<Animator>();
             collectPoints = GameObject.FindObjectsOfType<CollectPoint>();
             deliveryPoints = GameObject.FindObjectsOfType<DeliveryPoint>();
             player = GameObject.FindObjectOfType<Player>();
+
+            capsuleCollider = GetComponent<CapsuleCollider>();
 
 
             ClearIcons();
@@ -185,7 +194,7 @@ namespace Hackatoon_TCE
                     RunFromPlayer();
 
                     // Quando chegar no ponto de coleta, troca o estado para collecting
-                    if (navmeshAgent.enabled && navmeshAgent.remainingDistance < 1)
+                    if (navmeshAgent.enabled && navmeshAgent.remainingDistance < 1 && !navmeshAgent.pathPending)
                     {
                         ClearIcons();
                         State = EnemyState.COLLECTING;
@@ -226,7 +235,7 @@ namespace Hackatoon_TCE
                     RunFromPlayer();
 
                     // SE move ate o ponto de entrega selecionado, Ao chegar troca o estado para Delivery
-                    if (navmeshAgent.enabled && navmeshAgent.remainingDistance < 1)
+                    if (navmeshAgent.enabled && navmeshAgent.remainingDistance < 1 && !navmeshAgent.pathPending)
                     {
                         ClearIcons();
                         State = EnemyState.DELIVERING;
@@ -245,6 +254,8 @@ namespace Hackatoon_TCE
                     currentDeliveryCooldown += Time.deltaTime;
                     if (currentDeliveryCooldown >= DeliveryCoolDown)
                     {
+                        gameManager.AumentarCorrupcao();
+
                         ClearIcons();
                         State = EnemyState.IDLE;
                     }
@@ -267,11 +278,12 @@ namespace Hackatoon_TCE
                     player.target = null;
                     navmeshAgent.Stop();
                     navmeshAgent.velocity = Vector3.zero;
+                    capsuleCollider.enabled = false;
 
                     // Spawn prefabs
                     if (CoinPrefabs != null)
                     {
-                        int coinsQuantity = Random.Range(1, 6);
+                        int coinsQuantity = Random.Range(4, 8);
 
                         for (int i = 0; i < coinsQuantity; i++)
                         {
@@ -303,6 +315,8 @@ namespace Hackatoon_TCE
 
                     if (navmeshAgent.enabled)
                     {
+                        gameManager.AumtentarCidadania();
+
                         navmeshAgent.enabled = false;
                         //transform.Rotate(0, 0, 90);
 
