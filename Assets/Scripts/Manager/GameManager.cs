@@ -7,6 +7,8 @@ namespace Hackatoon_TCE
 
 	public class GameManager : MonoBehaviour {
 
+        public static int StaticSelectedAvatar;
+
         public Officer OfficerPreFab;
         public SpawnerManager[] SpawnManagers = null;
         public Player Player = null;

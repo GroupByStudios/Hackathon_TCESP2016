@@ -8,6 +8,8 @@ namespace Hackatoon_TCE
     public class Coin : MonoBehaviour
     {
 
+        AudioSource audio = null;
+
         const string PLAYER_TAG = "Player";
 
         public float RotationSpeed = 135f;
@@ -26,9 +28,20 @@ namespace Hackatoon_TCE
             Destroy(gameObject, DestroyInTime);
         }
 
+        bool play = false;
+
         // Update is called once per frame
         void Update()
         {
+            if (audio == null)
+            {
+
+                audio = GetComponent<AudioSource>();
+
+            }
+
+
+
 
             transform.Rotate(0, 90 * Time.deltaTime, 0);
 
@@ -42,6 +55,12 @@ namespace Hackatoon_TCE
 
                 if (player != null)
                 {
+                    if (audio != null && !play)
+                    {
+                        play = true;
+                        audio.Play();
+                    }
+
                     player.GiveCoin();
                     Destroy(this.gameObject);
                 }

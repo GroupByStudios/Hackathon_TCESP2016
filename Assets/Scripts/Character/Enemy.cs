@@ -78,34 +78,27 @@ namespace Hackatoon_TCE
         // Use this for initialization
         void Start()
         {
-
-
-            if (AvatarList != null)
+            /*if (AvatarList != null)
             {
                 for (int i = 0; i < AvatarList.Length; i++)
                 {
-                    AvatarList[i].SetActive(false);
+                    if (AvatarList[i] != null)
+                        AvatarList[i].SetActive(false);
                 }
-
-                AvatarIndex = Random.Range(0, AvatarList.Length);
 
                 // Palhaco esta bugado
-                while (AvatarIndex == 5 || AvatarIndex == 10)
-                {
-                    AvatarIndex = Random.Range(0, AvatarList.Length);
-                }
+                AvatarIndex = Random.Range(1, AvatarList.Length - 1);
 
                 AvatarList[AvatarIndex].SetActive(true);
                 currentAvatar = AvatarList[AvatarIndex];
-            }
+            }*/
 
             navmeshAgent = GetComponent<NavMeshAgent>();
 
-            AnimatorController = currentAvatar.GetComponent<Animator>();
+            
             collectPoints = GameObject.FindObjectsOfType<CollectPoint>();
             deliveryPoints = GameObject.FindObjectsOfType<DeliveryPoint>();
             player = GameObject.FindObjectOfType<Player>();
-
             capsuleCollider = GetComponent<CapsuleCollider>();
 
 
@@ -140,202 +133,248 @@ namespace Hackatoon_TCE
         // Update is called once per frame
         void Update()
         {
-
-
-            int movingDice = Random.Range(0, 101);
-            int collectingDice = Random.Range(0, 101);
-
-            if (AnimatorController != null)
-            {
-                AnimatorController.SetFloat("Speed_f", navmeshAgent.velocity.magnitude);
-                AnimatorController.SetInteger(ANIM_IDLE_SITTING_ON_GROUND, 0);
-            }
-            
-
-            switch (State)
+            if (AvatarList.Length > 0)
             {
 
-                case EnemyState.IDLE:
+                if (navmeshAgent == null)
+                {
+                    navmeshAgent = GetComponent<NavMeshAgent>();
+                }
 
-                    IdleCurrentCooldown += Time.deltaTime;
+                if (collectPoints == null)
+                {
+                    collectPoints = GameObject.FindObjectsOfType<CollectPoint>();
+                }
 
-                    if (IdleCurrentCooldown >= IdleCooldown)
+                if (deliveryPoints == null)
+                {
+                    deliveryPoints = GameObject.FindObjectsOfType<DeliveryPoint>();
+                }
+
+                if (player == null)
+                {
+                    player = GameObject.FindObjectOfType<Player>();
+                }
+
+                if (currentAvatar == null)
+                {
+                    if (AvatarList != null)
                     {
-
-                        /*if (movingDice >= MovingChance)
+                        for (int i = 0; i < AvatarList.Length; i++)
                         {
-
-                        }*/
-
-                        if (collectingDice >= CollectingChance)
-                        {
-                            collectPointTarget = collectPoints[Random.Range(0, collectPoints.Length)];
-                            Vector2 circleRandom = Random.insideUnitCircle * collectPointTarget.Range;
-
-                            ClearIcons();
-                            State = EnemyState.GOING_COLLECT;
-                            navmeshAgent.SetDestination(collectPointTarget.transform.position + new Vector3(circleRandom.x, collectPointTarget.transform.position.y, circleRandom.y));
+                            if (AvatarList[i] != null)
+                                AvatarList[i].SetActive(false);
                         }
 
-                        IdleCurrentCooldown = 0f;
+                        // Palhaco esta bugado
+                        AvatarIndex = Random.Range(1, AvatarList.Length - 1);
+
+                        AvatarList[AvatarIndex].SetActive(true);
+                        currentAvatar = AvatarList[AvatarIndex];
+
+                        AnimatorController = currentAvatar.GetComponent<Animator>();
                     }
-
-                    // Chances de se Mover, define o ponto de movimento e troca o estado para moving
-                    // Chances de iniciar Coleta, define o ponto de coleta e troca o estado para going_collect
-
-                    break;
-                case EnemyState.MOVING:
-
-                    // Se Move, ao chegar no destino troca para o idle
-
-                    break;
-                case EnemyState.GOING_COLLECT:
-
-                    RunFromPlayer();
-
-                    // Quando chegar no ponto de coleta, troca o estado para collecting
-                    if (navmeshAgent.enabled && navmeshAgent.remainingDistance < 1 && !navmeshAgent.pathPending)
-                    {
-                        ClearIcons();
-                        State = EnemyState.COLLECTING;
-                        navmeshAgent.ResetPath();
-                    }
-
-                    break;
-                case EnemyState.COLLECTING:
-
-                    if (SettingsIcon != null && !SettingsIcon.activeInHierarchy)
-                        SettingsIcon.SetActive(true);
-
-                    RunFromPlayer();
-
-                    // Animacao de coleta
-                    // Depois de um tempo escolhe um ponto de entrega, troca o estado para Going_Delivery
-                    CollectingCurrentCooldown += Time.deltaTime;
-
-                    if (CollectingCurrentCooldown >= CollectingCooldown)
-                    {
-                        // Recupera os pontos de Entrega
-                        deliveryPointTarget = deliveryPoints[Random.Range(0, deliveryPoints.Length)];
-                        State = EnemyState.GOING_DELIVERY;
-                        navmeshAgent.SetDestination(deliveryPointTarget.transform.position);
-
-                        ClearIcons();
-                        CollectingCurrentCooldown = 0f;
-                    }
-
-
-
-                    break;
-                case EnemyState.GOING_DELIVERY:
-
-                    if (DeliveryIcon != null && !DeliveryIcon.activeInHierarchy)
-                        DeliveryIcon.SetActive(true);
-
-                    RunFromPlayer();
-
-                    // SE move ate o ponto de entrega selecionado, Ao chegar troca o estado para Delivery
-                    if (navmeshAgent.enabled && navmeshAgent.remainingDistance < 1 && !navmeshAgent.pathPending)
-                    {
-                        ClearIcons();
-                        State = EnemyState.DELIVERING;
-                        navmeshAgent.ResetPath();
-
-                    }
-
-                    break;
-                case EnemyState.DELIVERING:
-
-                    // Animacao de entrega
-                    // Depois de um tempo faz a entrega e troca o estado para Enjoying
-                    RunFromPlayer();
-
-
-                    currentDeliveryCooldown += Time.deltaTime;
-                    if (currentDeliveryCooldown >= DeliveryCoolDown)
-                    {
-                        gameManager.AumentarCorrupcao();
-
-                        ClearIcons();
-                        State = EnemyState.IDLE;
-                    }
-
-                    break;
-                case EnemyState.ENJOYING:
-
-                    // Curte o sorvete
-                    if (EnjoyingIcon != null && !EnjoyingIcon.activeInHierarchy)
-                        EnjoyingIcon.SetActive(true);
-
-                    break;
-                case EnemyState.DYING:
 
                     ClearIcons();
+                }
 
-                    if (RunIcon != null && RunIcon.activeInHierarchy)
-                        RunIcon.SetActive(false);
 
-                    player.target = null;
-                    navmeshAgent.Stop();
-                    navmeshAgent.velocity = Vector3.zero;
-                    capsuleCollider.enabled = false;
 
-                    // Spawn prefabs
-                    if (CoinPrefabs != null)
-                    {
-                        int coinsQuantity = Random.Range(4, 8);
+                int movingDice = Random.Range(0, 101);
+                int collectingDice = Random.Range(0, 101);
 
-                        for (int i = 0; i < coinsQuantity; i++)
+                if (AnimatorController != null)
+                {
+                    AnimatorController.SetFloat("Speed_f", navmeshAgent.velocity.magnitude);
+                    AnimatorController.SetInteger(ANIM_IDLE_SITTING_ON_GROUND, 0);
+                }
+
+
+                switch (State)
+                {
+
+                    case EnemyState.IDLE:
+
+                        IdleCurrentCooldown += Time.deltaTime;
+
+                        if (IdleCurrentCooldown >= IdleCooldown)
                         {
-                            Coin coinPrefab = Instantiate(CoinPrefabs) as Coin;
-                            coinPrefab.transform.position = transform.position;
 
-                            switch (i)
+                            /*if (movingDice >= MovingChance)
                             {
-                                case 0:
-                                    coinPrefab.transform.LookAt(transform.position + transform.forward);
-                                    break;
-                                case 1:
-                                    coinPrefab.transform.LookAt(transform.position + transform.right);
-                                    break;
-                                case 2:
-                                    coinPrefab.transform.LookAt(transform.position + transform.forward * -1);
-                                    break;
-                                case 3:
-                                    coinPrefab.transform.LookAt(transform.position + transform.right * -1);
-                                    break;
+
+                            }*/
+
+                            if (collectingDice >= CollectingChance)
+                            {
+                                collectPointTarget = collectPoints[Random.Range(0, collectPoints.Length)];
+                                Vector2 circleRandom = Random.insideUnitCircle * collectPointTarget.Range;
+
+                                ClearIcons();
+                                State = EnemyState.GOING_COLLECT;
+                                navmeshAgent.SetDestination(collectPointTarget.transform.position + new Vector3(circleRandom.x, collectPointTarget.transform.position.y, circleRandom.y));
+                            }
+
+                            IdleCurrentCooldown = 0f;
+                        }
+
+                        // Chances de se Mover, define o ponto de movimento e troca o estado para moving
+                        // Chances de iniciar Coleta, define o ponto de coleta e troca o estado para going_collect
+
+                        break;
+                    case EnemyState.MOVING:
+
+                        // Se Move, ao chegar no destino troca para o idle
+
+                        break;
+                    case EnemyState.GOING_COLLECT:
+
+                        RunFromPlayer();
+
+                        // Quando chegar no ponto de coleta, troca o estado para collecting
+                        if (navmeshAgent.enabled && navmeshAgent.remainingDistance < 1 && !navmeshAgent.pathPending)
+                        {
+                            ClearIcons();
+                            State = EnemyState.COLLECTING;
+                            navmeshAgent.ResetPath();
+                        }
+
+                        break;
+                    case EnemyState.COLLECTING:
+
+                        if (SettingsIcon != null && !SettingsIcon.activeInHierarchy)
+                            SettingsIcon.SetActive(true);
+
+                        RunFromPlayer();
+
+                        // Animacao de coleta
+                        // Depois de um tempo escolhe um ponto de entrega, troca o estado para Going_Delivery
+                        CollectingCurrentCooldown += Time.deltaTime;
+
+                        if (CollectingCurrentCooldown >= CollectingCooldown)
+                        {
+                            // Recupera os pontos de Entrega
+                            deliveryPointTarget = deliveryPoints[Random.Range(0, deliveryPoints.Length)];
+                            State = EnemyState.GOING_DELIVERY;
+                            navmeshAgent.SetDestination(deliveryPointTarget.transform.position);
+
+                            ClearIcons();
+                            CollectingCurrentCooldown = 0f;
+                        }
+
+
+
+                        break;
+                    case EnemyState.GOING_DELIVERY:
+
+                        if (DeliveryIcon != null && !DeliveryIcon.activeInHierarchy)
+                            DeliveryIcon.SetActive(true);
+
+                        RunFromPlayer();
+
+                        // SE move ate o ponto de entrega selecionado, Ao chegar troca o estado para Delivery
+                        if (navmeshAgent.enabled && navmeshAgent.remainingDistance < 1 && !navmeshAgent.pathPending)
+                        {
+                            ClearIcons();
+                            State = EnemyState.DELIVERING;
+                            navmeshAgent.ResetPath();
+
+                        }
+
+                        break;
+                    case EnemyState.DELIVERING:
+
+                        // Animacao de entrega
+                        // Depois de um tempo faz a entrega e troca o estado para Enjoying
+                        RunFromPlayer();
+
+
+                        currentDeliveryCooldown += Time.deltaTime;
+                        if (currentDeliveryCooldown >= DeliveryCoolDown)
+                        {
+                            gameManager.AumentarCorrupcao();
+
+                            ClearIcons();
+                            State = EnemyState.IDLE;
+                        }
+
+                        break;
+                    case EnemyState.ENJOYING:
+
+                        // Curte o sorvete
+                        if (EnjoyingIcon != null && !EnjoyingIcon.activeInHierarchy)
+                            EnjoyingIcon.SetActive(true);
+
+                        break;
+                    case EnemyState.DYING:
+
+                        ClearIcons();
+
+                        if (RunIcon != null && RunIcon.activeInHierarchy)
+                            RunIcon.SetActive(false);
+
+                        player.target = null;
+                        navmeshAgent.Stop();
+                        navmeshAgent.velocity = Vector3.zero;
+                        capsuleCollider.enabled = false;
+
+                        // Spawn prefabs
+                        if (CoinPrefabs != null)
+                        {
+                            int coinsQuantity = Random.Range(4, 8);
+
+                            for (int i = 0; i < coinsQuantity; i++)
+                            {
+                                Coin coinPrefab = Instantiate(CoinPrefabs) as Coin;
+                                coinPrefab.transform.position = transform.position;
+
+                                switch (i)
+                                {
+                                    case 0:
+                                        coinPrefab.transform.LookAt(transform.position + transform.forward);
+                                        break;
+                                    case 1:
+                                        coinPrefab.transform.LookAt(transform.position + transform.right);
+                                        break;
+                                    case 2:
+                                        coinPrefab.transform.LookAt(transform.position + transform.forward * -1);
+                                        break;
+                                    case 3:
+                                        coinPrefab.transform.LookAt(transform.position + transform.right * -1);
+                                        break;
+                                }
                             }
                         }
-                    }
 
-                    State = EnemyState.DEAD;
+                        State = EnemyState.DEAD;
 
-                    break;
-                case EnemyState.DEAD:
+                        break;
+                    case EnemyState.DEAD:
 
-                    if (navmeshAgent.enabled)
-                    {
-                        gameManager.AumtentarCidadania();
-
-                        navmeshAgent.enabled = false;
-                        //transform.Rotate(0, 0, 90);
-
-                        currentDeadCooldown += Time.deltaTime;
-
-                        if (currentDeadCooldown > DeadCooldown)
+                        if (navmeshAgent.enabled)
                         {
-                            transform.position = transform.position + Vector3.down * Time.deltaTime;
+                            gameManager.AumtentarCidadania();
 
-                            if (transform.position.y < -3)
-                                Destroy(gameObject);
+                            navmeshAgent.enabled = false;
+                            //transform.Rotate(0, 0, 90);
+
+                            currentDeadCooldown += Time.deltaTime;
+
+                            if (currentDeadCooldown > DeadCooldown)
+                            {
+                                transform.position = transform.position + Vector3.down * Time.deltaTime;
+
+                                if (transform.position.y < -3)
+                                    Destroy(gameObject);
+                            }
                         }
-                    }
 
-                    if (AnimatorController != null)
-                        AnimatorController.SetInteger(ANIM_IDLE_SITTING_ON_GROUND, ANIM_INT_IDE_SITTING_ON_GROUND);
+                        if (AnimatorController != null)
+                            AnimatorController.SetInteger(ANIM_IDLE_SITTING_ON_GROUND, ANIM_INT_IDE_SITTING_ON_GROUND);
 
 
-                    break;
+                        break;
+                }
             }
         }
 

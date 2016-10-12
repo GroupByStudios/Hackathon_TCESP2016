@@ -1,10 +1,13 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 namespace Hackatoon_TCE
 {
-	public class CharacterSelectionMenu : MonoBehaviour {		
+	public class CharacterSelectionMenu : MonoBehaviour {
+
+        public GameObject sobreImage;
 
 		public GameObject[] Characters;
 		public int CharacterSelectedIndex;
@@ -99,6 +102,18 @@ namespace Hackatoon_TCE
 		{
 			ChangeSelectedCharacter(true);
 		}
+
+        public void Btn_Jogar_Click()
+        {
+            GameManager.StaticSelectedAvatar = CharacterSelectedIndex;
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        }
+
+        public void Btn_Sobre_Click()
+        {
+            sobreImage.SetActive(!sobreImage.activeInHierarchy);
+
+        }
 
 		#endregion
 

@@ -68,10 +68,11 @@ namespace Hackatoon_TCE
         // Use this for initialization
         void Start()
         {
-
-            if (AvatarList != null && AvatarIndex > -1)
+            
+            if (AvatarList != null)
             {
-                AvatarList[AvatarIndex].SetActive(true);
+                AvatarList[GameManager.StaticSelectedAvatar].SetActive(true);
+                AnimatorController = GetComponent<Animator>();
             }
 
             defaultY = transform.position.y;

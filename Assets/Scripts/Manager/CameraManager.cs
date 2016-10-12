@@ -6,6 +6,8 @@ namespace Hackatoon_TCE
 
 	public class CameraManager : MonoBehaviour {
 
+      
+        
 		public GameObject Player;
 		public float CameraLerp;
 		public float CameraBoom;

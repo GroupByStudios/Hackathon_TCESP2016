@@ -8539,6 +8539,7 @@ GameObject:
   - 195: {fileID: 195000012125497168}
   - 114: {fileID: 114000011026587236}
   - 136: {fileID: 136000010574375462}
+  - 114: {fileID: 114000013603986374}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -34058,39 +34059,39 @@ MonoBehaviour:
   State: 0
   AvatarIndex: 0
   AvatarList:
-  - {fileID: 1000013713245630}
-  - {fileID: 1000010396733406}
-  - {fileID: 1000012895918930}
-  - {fileID: 1000012231716884}
-  - {fileID: 1000011195769260}
-  - {fileID: 1000013003247238}
-  - {fileID: 1000011292496592}
-  - {fileID: 1000012371962468}
-  - {fileID: 1000012372934896}
-  - {fileID: 1000010967762602}
-  - {fileID: 1000010722675434}
-  - {fileID: 1000012775665674}
-  - {fileID: 1000012976909866}
-  - {fileID: 1000010603744306}
-  - {fileID: 1000012960055180}
-  - {fileID: 1000011768478186}
-  - {fileID: 1000010569998334}
-  - {fileID: 1000013194651538}
-  - {fileID: 1000014224425798}
-  - {fileID: 1000013275245918}
-  - {fileID: 1000010474537974}
-  - {fileID: 1000012067581206}
-  - {fileID: 1000014005727730}
-  - {fileID: 1000010899647642}
-  - {fileID: 1000011300156660}
-  - {fileID: 1000011777549228}
-  - {fileID: 1000011354329768}
-  - {fileID: 1000011519056292}
-  - {fileID: 1000012608179796}
-  - {fileID: 1000013585313070}
   - {fileID: 1000013214451614}
-  - {fileID: 1000013122295236}
   - {fileID: 1000013995536652}
+  - {fileID: 1000013122295236}
+  - {fileID: 1000013585313070}
+  - {fileID: 1000012608179796}
+  - {fileID: 1000011519056292}
+  - {fileID: 1000011354329768}
+  - {fileID: 1000011777549228}
+  - {fileID: 1000011300156660}
+  - {fileID: 1000010899647642}
+  - {fileID: 1000014005727730}
+  - {fileID: 1000012067581206}
+  - {fileID: 1000010474537974}
+  - {fileID: 1000013275245918}
+  - {fileID: 1000014224425798}
+  - {fileID: 1000013194651538}
+  - {fileID: 1000010569998334}
+  - {fileID: 1000011768478186}
+  - {fileID: 1000012960055180}
+  - {fileID: 1000010603744306}
+  - {fileID: 1000012976909866}
+  - {fileID: 1000012775665674}
+  - {fileID: 1000010722675434}
+  - {fileID: 1000010967762602}
+  - {fileID: 1000012372934896}
+  - {fileID: 1000012371962468}
+  - {fileID: 1000011292496592}
+  - {fileID: 1000013003247238}
+  - {fileID: 1000011195769260}
+  - {fileID: 1000012231716884}
+  - {fileID: 1000012895918930}
+  - {fileID: 1000010396733406}
+  - {fileID: 1000013713245630}
   SpawnPoint: {fileID: 0}
   capsuleCollider: {fileID: 0}
   DeliveryIcon: {fileID: 1000014254928942}
@@ -34149,6 +34150,44 @@ MonoBehaviour:
   omegaY: 6
   index: 210.43848
   RotationSpeed: 5
+--- !u!114 &114000013603986374
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000012222264166}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 023dcc86cce12a64fa83e422aa83318c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameManager: {fileID: 0}
+  State: 0
+  AvatarIndex: 0
+  AvatarList: []
+  SpawnPoint: {fileID: 0}
+  capsuleCollider: {fileID: 0}
+  DeliveryIcon: {fileID: 0}
+  RunIcon: {fileID: 0}
+  SettingsIcon: {fileID: 0}
+  EnjoyingIcon: {fileID: 0}
+  ReportedIcon: {fileID: 0}
+  CoinPrefabs: {fileID: 0}
+  AnimationStatic: 0
+  AnimatorController: {fileID: 0}
+  Speed: 5
+  AnimationSpeedMultiplier: 1
+  Reported: 0
+  Officer: 0
+  navmeshAgent: {fileID: 0}
+  RunningMinDistance: 6
+  MovingChance: 70
+  CollectingChance: 40
+  IdleCooldown: 0
+  CollectingCooldown: 2
+  DeliveryCoolDown: 3
+  RunningCooldown: 4
+  DeadCooldown: 3
 --- !u!114 &114000013965493576
 MonoBehaviour:
   m_ObjectHideFlags: 1
