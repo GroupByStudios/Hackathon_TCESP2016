@@ -9,6 +9,8 @@ public class Turorial : MonoBehaviour
     public GameObject Tutorial3;
     public GameObject btnProximo;
     public GameObject btnAnterior;
+	public GameObject btnFechar;
+	public GameObject btnAbrir;
 
     public bool aberto = true;
 
@@ -97,12 +99,17 @@ public class Turorial : MonoBehaviour
 
     public void btn_Abrir()
     {
-        aberto = true;
-        Tutorial1.SetActive(true);
-        Tutorial2.SetActive(false);
-        Tutorial3.SetActive(false);
-        btnProximo.SetActive(true);
-        btnAnterior.SetActive(true);
+		if (!aberto)
+		{
+	        aberto = true;
+	        Tutorial1.SetActive(true);
+	        Tutorial2.SetActive(false);
+	        Tutorial3.SetActive(false);
+	        btnProximo.SetActive(true);
+	        btnAnterior.SetActive(true);
+			btnAbrir.SetActive(false);
+			btnFechar.SetActive(true);
+		}
     }
 
     public void btn_Fechar()
@@ -113,7 +120,8 @@ public class Turorial : MonoBehaviour
         Tutorial3.SetActive(false);
         btnProximo.SetActive(false);
         btnAnterior.SetActive(false);
-
+		btnAbrir.SetActive(true);
+		btnFechar.SetActive(false);
     }
 
 }
