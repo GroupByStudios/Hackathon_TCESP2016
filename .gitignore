@@ -70,3 +70,5 @@ $RECYCLE.BIN/
 
 # Windows shortcuts
 *.lnk
+Assets/Scene/Game/LightingData.asset
+Assets/Scene/Game/LightingData.asset.meta
