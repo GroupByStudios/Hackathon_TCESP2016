@@ -1185,6 +1185,10 @@ MonoBehaviour:
   - {fileID: 1389842161}
   Player: {fileID: 1093451770}
   OfficerSpawner: {fileID: 52634837}
+  SliderCorrupcao: {fileID: 0}
+  SliderCidadania: {fileID: 0}
+  corrupcao: 0
+  cidadania: 0
 --- !u!4 &80148098
 Transform:
   m_ObjectHideFlags: 0
@@ -14175,6 +14179,85 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 419380, guid: 44c107492f53a7f499432ecb3b57d559, type: 2}
   m_PrefabInternal: {fileID: 1313898090}
+--- !u!1 &1328854868
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1328854872}
+  - 33: {fileID: 1328854871}
+  - 64: {fileID: 1328854870}
+  - 23: {fileID: 1328854869}
+  m_Layer: 0
+  m_Name: Arrow
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!23 &1328854869
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1328854868}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 2100000, guid: a4e536c66b79f464e8080192c6d4737f, type: 2}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 1
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_SelectedWireframeHidden: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+--- !u!64 &1328854870
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1328854868}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Convex: 0
+  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!33 &1328854871
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1328854868}
+  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &1328854872
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1328854868}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.02, y: 0.22, z: -17.929}
+  m_LocalScale: {x: 0.12403942, y: 0.16005082, z: 0.16005082}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 27
 --- !u!4 &1336453321 stripped
 Transform:
   m_PrefabParentObject: {fileID: 484990, guid: 607facfd35b121945bf4493ef50978b4, type: 2}
@@ -14786,7 +14869,9 @@ MonoBehaviour:
   - {fileID: 1262302583}
   MaxEnemies: 20
   SpawnCooldown: 0.5
+  CorruptChance: 4
   Enemies: []
+  gameManager: {fileID: 0}
 --- !u!4 &1392341772 stripped
 Transform:
   m_PrefabParentObject: {fileID: 455998, guid: f08964b56fd8bad4da16b5d8cb27433a, type: 2}

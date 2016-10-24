@@ -2,6 +2,8 @@
 using UnityEngine.UI;
 using System.Collections;
 
+using UnityEngine.SceneManagement;
+
 namespace Hackatoon_TCE
 {
 
@@ -19,6 +21,9 @@ namespace Hackatoon_TCE
 
         public int corrupcao;
         public int cidadania;
+
+		public GameObject HUD_Jogo_Ganhou;
+		public GameObject HUD_Jogo_Perdeu;
     
         void Update()
         {
@@ -32,6 +37,7 @@ namespace Hackatoon_TCE
             SpawnerManager spawnerPtr = null;
             Enemy enemyPtr = null;
 
+			/*
             // Percorre todos o Spawn Managers
             for (int i = 0; i < SpawnManagers.Length; i++)
             {
@@ -61,8 +67,22 @@ namespace Hackatoon_TCE
                     }
                 }
             }
+			*/
+
             AtualizarHUD();
         }
+
+		public void SpawnOfficer(Vector3 position)
+		{
+			if (OfficerPreFab != null)
+			{
+				Officer officerObj = Instantiate(OfficerPreFab);
+				officerObj.transform.position = OfficerSpawner.position;
+				officerObj.navMeshAgent = officerObj.GetComponent<NavMeshAgent>();
+				officerObj.navMeshAgent.Warp(OfficerSpawner.position);
+				officerObj.Target = position;
+			}			
+		}
 
         public void AumentarCorrupcao()
         {
@@ -70,25 +90,28 @@ namespace Hackatoon_TCE
             if (corrupcao >= 20)
             {
                 // Perdeu o jogo
+				HUD_Jogo_Perdeu.SetActive(true);
             }
-            
-            cidadania--;
+			else
+			{
+	            cidadania--;
 
-            if (cidadania < 0)
-                cidadania = 0;
+	            if (cidadania < 0)
+	                cidadania = 0;
+			}
         }
 
         public void AumtentarCidadania()
         {
-            cidadania += 3;
+            cidadania++;
             corrupcao--;
 
             if (corrupcao < 0)
                 corrupcao = 0;
 
-            if (cidadania > 20)
+            if (cidadania > 30)
             {
-                // navega para os creditos
+				HUD_Jogo_Ganhou.SetActive(true);
             }
         }
 
@@ -104,11 +127,16 @@ namespace Hackatoon_TCE
 
             if (SliderCidadania != null)
             {
-                SliderCidadania.maxValue = 20;
+                SliderCidadania.maxValue = 30;
                 SliderCidadania.value = cidadania;
             }
 
         }
+			
+		public void btn_ComecarDenovo_Click()
+		{
+			SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
+		}
 	}
 
 }

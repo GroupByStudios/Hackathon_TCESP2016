@@ -52,6 +52,14 @@ namespace Hackatoon_TCE
         public bool Reported;
         public bool Officer;
 
+		public bool IsCorrupt;
+
+		[HideInInspector]
+		public int EnemyIndex;
+
+		[HideInInspector]
+		public SpawnerManager spawnerManager;
+
         [HideInInspector]
         public NavMeshAgent navmeshAgent;
 
@@ -224,10 +232,16 @@ namespace Hackatoon_TCE
                         break;
                     case EnemyState.MOVING:
 
+					if (SettingsIcon != null && !SettingsIcon.activeInHierarchy && IsCorrupt)
+						SettingsIcon.SetActive(true);
+
                         // Se Move, ao chegar no destino troca para o idle
 
                         break;
                     case EnemyState.GOING_COLLECT:
+
+					if (SettingsIcon != null && !SettingsIcon.activeInHierarchy && IsCorrupt)
+						SettingsIcon.SetActive(true);
 
                         RunFromPlayer();
 
@@ -242,8 +256,8 @@ namespace Hackatoon_TCE
                         break;
                     case EnemyState.COLLECTING:
 
-                        if (SettingsIcon != null && !SettingsIcon.activeInHierarchy)
-                            SettingsIcon.SetActive(true);
+					if (SettingsIcon != null && !SettingsIcon.activeInHierarchy && IsCorrupt)
+						SettingsIcon.SetActive(true);
 
                         RunFromPlayer();
 
@@ -267,8 +281,8 @@ namespace Hackatoon_TCE
                         break;
                     case EnemyState.GOING_DELIVERY:
 
-                        if (DeliveryIcon != null && !DeliveryIcon.activeInHierarchy)
-                            DeliveryIcon.SetActive(true);
+					if (DeliveryIcon != null && !DeliveryIcon.activeInHierarchy && IsCorrupt)
+						DeliveryIcon.SetActive(true);
 
                         RunFromPlayer();
 
@@ -302,15 +316,17 @@ namespace Hackatoon_TCE
                     case EnemyState.ENJOYING:
 
                         // Curte o sorvete
-                        if (EnjoyingIcon != null && !EnjoyingIcon.activeInHierarchy)
+					if (EnjoyingIcon != null && !EnjoyingIcon.activeInHierarchy && IsCorrupt)
                             EnjoyingIcon.SetActive(true);
 
                         break;
                     case EnemyState.DYING:
 
+					spawnerManager.FreeSlot(EnemyIndex);
+
                         ClearIcons();
 
-                        if (RunIcon != null && RunIcon.activeInHierarchy)
+					if (RunIcon != null && RunIcon.activeInHierarchy && IsCorrupt)
                             RunIcon.SetActive(false);
 
                         player.target = null;
@@ -351,9 +367,12 @@ namespace Hackatoon_TCE
                         break;
                     case EnemyState.DEAD:
 
+
+
+
                         if (navmeshAgent.enabled)
                         {
-                            gameManager.AumtentarCidadania();
+                            //gameManager.AumtentarCidadania();
 
                             navmeshAgent.enabled = false;
                             //transform.Rotate(0, 0, 90);
@@ -380,7 +399,7 @@ namespace Hackatoon_TCE
 
         void RunFromPlayer()
         {
-            if (player != null)
+			if (player != null && IsCorrupt)
             {
                 Vector3 distance = player.transform.position - transform.position;
 

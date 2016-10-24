@@ -40,10 +40,7 @@ namespace Hackatoon_TCE
 
             }
 
-
-
-
-            transform.Rotate(0, 90 * Time.deltaTime, 0);
+			transform.Rotate(0, 90 * Time.deltaTime, 0);
 
         }
 
@@ -58,11 +55,11 @@ namespace Hackatoon_TCE
                     if (audio != null && !play)
                     {
                         play = true;
-                        audio.Play();
+                        //audio.Play();
                     }
 
                     player.GiveCoin();
-                    Destroy(this.gameObject);
+					Destroy(this.gameObject);
                 }
             }
         }

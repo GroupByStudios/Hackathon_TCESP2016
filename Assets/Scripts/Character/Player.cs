@@ -46,6 +46,20 @@ namespace Hackatoon_TCE
 
         private Rigidbody currentRigidBody;
 
+		private AudioSource starAudioSource;
+		public AudioClip StarGiveCoinAudioClip;
+		public GameObject StarParticle;
+
+		private AudioSource quedaAudioSource;
+		public AudioClip QuedaAudioClip;
+
+		public GameManager gameManager;
+		public SpawnerManager spawnerManager;
+		public float CompassDegreeSpeed = 15f;
+		public GameObject Compass;
+		public bool CompassEnemy = false;
+		public float CompassMinDistance = 99999f;
+
         [HideInInspector]
         public Enemy target;
 
@@ -53,6 +67,8 @@ namespace Hackatoon_TCE
         const string ANIM_SPEED_MULTIPLIER = "SpeedMultiplier_f";
         const string ANIM_JUMP = "Jump_b";
         const string ANIM_STATIC = "Static_b";
+
+
 
         void Awake()
         {
@@ -78,11 +94,21 @@ namespace Hackatoon_TCE
             defaultY = transform.position.y;
 
             currentRigidBody = GetComponent<Rigidbody>();
+
+			starAudioSource = gameObject.AddComponent<AudioSource>();
+			starAudioSource.playOnAwake = false;
+			starAudioSource.clip = StarGiveCoinAudioClip;
+
+			quedaAudioSource = gameObject.AddComponent<AudioSource>();
+			quedaAudioSource.playOnAwake = false;
+			quedaAudioSource.clip = QuedaAudioClip;
         }
 
         // Update is called once per frame
         void Update()
         {
+			CompassEnemy = false;
+			CompassMinDistance = 99999f;
 
             float horizontalInput = Input.GetAxisRaw("Horizontal");
             float verticalInput = Input.GetAxisRaw("Vertical");
@@ -160,10 +186,17 @@ namespace Hackatoon_TCE
                             foreach (var enemyKeyValye in ConeGameObject.EnemiesDictionary)
                             {
                                 if (enemyKeyValye.Value.State != EnemyState.DYING &&
-                                    enemyKeyValye.Value.State != EnemyState.DEAD)
+									enemyKeyValye.Value.State != EnemyState.DEAD && 
+									enemyKeyValye.Value.IsCorrupt)
                                 {
+									gameManager.SpawnOfficer(enemyKeyValye.Value.transform.position);
                                     enemyKeyValye.Value.Reported = true;
                                     enemyKeyValye.Value.State = EnemyState.DYING;
+
+									// Faz nascer a particula no inimigo e toca o auido de quedra
+									quedaAudioSource.Play();
+									GameObject particle =  Instantiate(StarParticle);
+									particle.transform.position = new Vector3(enemyKeyValye.Value.transform.position.x, enemyKeyValye.Value.transform.position.y + 0.5f, enemyKeyValye.Value.transform.position.z);
                                 }
                             }
                         }
@@ -203,6 +236,34 @@ namespace Hackatoon_TCE
                 currentRigidBody.velocity = Vector3.zero;
             }
 
+			Vector3 compassTarget = Vector3.zero;
+			float compassDistance = 99999f;
+			Enemy _enemy;
+			// Calcula a posicao da Seta
+			for(int i = 0; i < spawnerManager.Enemies.Length; i++)
+			{
+				_enemy = spawnerManager.Enemies[i];
+
+				if (_enemy != null && _enemy.IsCorrupt)
+				{
+					if (compassDistance >= (_enemy.transform.position - transform.position).magnitude)
+					{
+						compassDistance = (_enemy.transform.position - transform.position).magnitude;
+						compassTarget = _enemy.transform.position;
+						CompassEnemy = true;
+					}
+				}
+			}
+
+			if (CompassEnemy)
+			{
+				Compass.SetActive(true);
+				Compass.transform.LookAt(new Vector3(compassTarget.x, Compass.transform.position.y, compassTarget.z));
+			}
+			else
+			{
+				Compass.SetActive(false);
+			}
         }
 
         private void UpdateConeColor(float colorTime)
@@ -226,7 +287,9 @@ namespace Hackatoon_TCE
 
         public void GiveCoin()
         {
+			gameManager.AumtentarCidadania();
             this.coinAmmount++;
+			starAudioSource.Play();
         }
 
         public void RemoveCoin(float quantidade)

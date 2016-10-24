@@ -33282,7 +33282,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 9c0880e4cd8a8704e82b6940624b569a, type: 2}
+  - {fileID: 2100000, guid: 39aca8e767350a948bd32cf2b1bbf78b, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_ProbeAnchor: {fileID: 0}
@@ -33311,7 +33311,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 9c0880e4cd8a8704e82b6940624b569a, type: 2}
+  - {fileID: 2100000, guid: 39aca8e767350a948bd32cf2b1bbf78b, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_ProbeAnchor: {fileID: 0}
@@ -33340,7 +33340,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 9c0880e4cd8a8704e82b6940624b569a, type: 2}
+  - {fileID: 2100000, guid: 39aca8e767350a948bd32cf2b1bbf78b, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_ProbeAnchor: {fileID: 0}
@@ -33369,7 +33369,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 9c0880e4cd8a8704e82b6940624b569a, type: 2}
+  - {fileID: 2100000, guid: 39aca8e767350a948bd32cf2b1bbf78b, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_ProbeAnchor: {fileID: 0}
@@ -33398,7 +33398,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 9c0880e4cd8a8704e82b6940624b569a, type: 2}
+  - {fileID: 2100000, guid: 39aca8e767350a948bd32cf2b1bbf78b, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_ProbeAnchor: {fileID: 0}
@@ -34038,8 +34038,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7429456246664ec41ad40519e2c459bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  amplitudeX: 0.05
-  amplitudeY: 0.2
+  amplitudeX: 0
+  amplitudeY: 0.05
   omegaX: 50
   omegaY: 6
   index: 210.43848
@@ -34107,6 +34107,9 @@ MonoBehaviour:
   AnimationSpeedMultiplier: 3
   Reported: 0
   Officer: 0
+  IsCorrupt: 0
+  EnemyIndex: 0
+  spawnerManager: {fileID: 0}
   navmeshAgent: {fileID: 0}
   RunningMinDistance: 6
   MovingChance: 70
@@ -34144,8 +34147,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7429456246664ec41ad40519e2c459bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  amplitudeX: 0.05
-  amplitudeY: 0.2
+  amplitudeX: 0
+  amplitudeY: 0.05
   omegaX: 50
   omegaY: 6
   index: 210.43848
@@ -34179,6 +34182,9 @@ MonoBehaviour:
   AnimationSpeedMultiplier: 1
   Reported: 0
   Officer: 0
+  IsCorrupt: 0
+  EnemyIndex: 0
+  spawnerManager: {fileID: 0}
   navmeshAgent: {fileID: 0}
   RunningMinDistance: 6
   MovingChance: 70
